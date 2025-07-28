@@ -11,6 +11,7 @@ lifecycleRuntimeKtx = "2.9.2"
 activityCompose = "1.10.1"
 composeBom = "2024.09.00"
 appcompat = "1.7.1"
+mapsMobile = "4.18.0-full"
 material = "1.12.0"
 jetbrainsKotlinJvm = "2.1.10"
 ksp = "2.1.10-1.0.31"
@@ -43,6 +44,7 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 # Material and AppCompat libraries
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+maps-mobile = { module = "com.yandex.android:maps.mobile", version.ref = "mapsMobile" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 # ----------------------------------------------------------
