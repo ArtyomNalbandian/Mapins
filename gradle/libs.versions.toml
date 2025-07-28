@@ -1,19 +1,21 @@
 [versions]
+activityCompose = "1.10.1"
 androidDesugarJdkLibs = "2.1.4"
 androidGradlePlugin = "8.10.1"
 androidTools = "31.9.0"
-kotlin = "2.1.10"
+appcompat = "1.7.1"
+composeBom = "2024.09.00"
 coreKtx = "1.16.0"
+espressoCore = "3.6.1"
+jetbrainsKotlinJvm = "2.1.10"
 junit = "4.13.2"
 junitVersion = "1.2.1"
-espressoCore = "3.6.1"
-lifecycleRuntimeKtx = "2.9.2"
-activityCompose = "1.10.1"
-composeBom = "2024.09.00"
-appcompat = "1.7.1"
-material = "1.12.0"
-jetbrainsKotlinJvm = "2.1.10"
+kotlin = "2.1.10"
+kotlinxSerializationJson = "1.8.0"
 ksp = "2.1.10-1.0.31"
+lifecycleRuntimeKtx = "2.9.2"
+mapsMobile = "4.18.0-full"
+material = "1.12.0"
 room = "2.6.1"
 
 [libraries]
@@ -43,6 +45,7 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 # Material and AppCompat libraries
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+maps-mobile = { module = "com.yandex.android:maps.mobile", version.ref = "mapsMobile" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 # ----------------------------------------------------------
@@ -52,6 +55,7 @@ android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", ver
 android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
 compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
 
