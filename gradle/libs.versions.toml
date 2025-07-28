@@ -1,20 +1,23 @@
 [versions]
+activityCompose = "1.10.1"
 androidDesugarJdkLibs = "2.1.4"
 androidGradlePlugin = "8.10.1"
 androidTools = "31.9.0"
-kotlin = "2.1.10"
+androidxLifecycle = "2.8.7"
+androidxNavigation="2.8.5"
+appcompat = "1.7.1"
+composeBom = "2024.09.00"
 coreKtx = "1.16.0"
+espressoCore = "3.6.1"
+jetbrainsKotlinJvm = "2.1.10"
 junit = "4.13.2"
 junitVersion = "1.2.1"
-espressoCore = "3.6.1"
+kotlin = "2.1.10"
+kotlinxSerializationJson = "1.8.0"
+ksp = "2.1.10-1.0.31"
 lifecycleRuntimeKtx = "2.9.2"
-activityCompose = "1.10.1"
-composeBom = "2024.09.00"
-appcompat = "1.7.1"
 mapsMobile = "4.18.0-full"
 material = "1.12.0"
-jetbrainsKotlinJvm = "2.1.10"
-ksp = "2.1.10-1.0.31"
 room = "2.6.1"
 
 [libraries]
@@ -34,6 +37,10 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 
 # Compose UI libraries and components
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -54,6 +61,7 @@ android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", ver
 android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
 compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
 

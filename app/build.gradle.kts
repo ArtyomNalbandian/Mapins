@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.mapins.android.application)
     alias(libs.plugins.kotlin.compose)
@@ -8,6 +10,8 @@ android {
     compileSdk = 35
 
     defaultConfig {
+
+        buildConfigField("String", "YANDEX_MAPS_API_KEY", "\"${getApiKey("YANDEX_MAPS_API_KEY")}\"")
         applicationId = "com.example.mapins"
         minSdk = 28
         targetSdk = 35
@@ -35,6 +39,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -57,4 +62,15 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(projects.feature.maps)
+}
+
+fun getApiKey(key: String): String {
+    val localProperties = Properties()
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        localProperties.load(localPropertiesFile.inputStream())
+    }
+    return localProperties.getProperty(key) ?: throw GradleException("API key '$key' not found in local.properties")
 }

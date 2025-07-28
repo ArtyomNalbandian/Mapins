@@ -22,9 +22,9 @@ internal fun Project.configureAndroidCompose(
         dependencies {
             val bom = libs.findLibrary("androidx-compose-bom").get()
             "implementation"(platform(bom))
-            "androidTestImplementation"(platform(bom))
+//            "androidTestImplementation"(platform(bom))
             "implementation"(libs.findLibrary("androidx-compose-ui-tooling-preview").get())
-            "debugImplementation"(libs.findLibrary("androidx-compose-ui-tooling").get())
+//            "debugImplementation"(libs.findLibrary("androidx-compose-ui-tooling").get())
         }
 
         testOptions {
@@ -43,15 +43,15 @@ internal fun Project.configureAndroidCompose(
                 .dir(projectDir.toRelativeString(rootDir))
         }.map { it.dir(dir) }
 
-        project.providers.gradleProperty("enableComposeCompilerMetrics").onlyIfTrue()
-            .relativeToRootProject("compose-metrics")
-            .let(metricsDestination::set)
+//        project.providers.gradleProperty("enableComposeCompilerMetrics").onlyIfTrue()
+//            .relativeToRootProject("compose-metrics")
+//            .let(metricsDestination::set)
 
-        project.providers.gradleProperty("enableComposeCompilerReports").onlyIfTrue()
-            .relativeToRootProject("compose-reports")
-            .let(reportsDestination::set)
+//        project.providers.gradleProperty("enableComposeCompilerReports").onlyIfTrue()
+//            .relativeToRootProject("compose-reports")
+//            .let(reportsDestination::set)
 
-        stabilityConfigurationFiles
-            .add(isolated.rootProject.projectDirectory.file("compose_compiler_config.conf"))
+//        stabilityConfigurationFiles
+//            .add(isolated.rootProject.projectDirectory.file("compose_compiler_config.conf"))
     }
 }

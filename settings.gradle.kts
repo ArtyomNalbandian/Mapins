@@ -28,5 +28,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Mapins"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":feature:maps")
