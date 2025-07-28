@@ -3,6 +3,8 @@ activityCompose = "1.10.1"
 androidDesugarJdkLibs = "2.1.4"
 androidGradlePlugin = "8.10.1"
 androidTools = "31.9.0"
+androidxLifecycle = "2.8.7"
+androidxNavigation="2.8.5"
 appcompat = "1.7.1"
 composeBom = "2024.09.00"
 coreKtx = "1.16.0"
@@ -35,6 +37,10 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 
 # Compose UI libraries and components
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-lifecycle-runtimeCompose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewModelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
