@@ -29,3 +29,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Mapins"
 include(":app")
+include(":feature:maps")
