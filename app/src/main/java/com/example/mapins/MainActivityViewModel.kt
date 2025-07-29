@@ -1,10 +1,13 @@
 package com.example.mapins
 
 import androidx.lifecycle.ViewModel
+import com.example.model.DarkThemeConfig
+import com.example.model.ThemeBrand
+import com.example.model.UserData
 import kotlinx.coroutines.flow.StateFlow
 
 class MainActivityViewModel() : ViewModel() {
-    val uiState: StateFlow
+    val uiState: StateFlow<MainActivityUiState>
 }
 
 sealed interface MainActivityUiState {
