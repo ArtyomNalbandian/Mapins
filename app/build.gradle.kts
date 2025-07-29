@@ -45,7 +45,9 @@ android {
 
 dependencies {
 
-    implementation(project(":feature:maps"))
+    implementation(projects.core.model)
+
+    implementation(projects.feature.maps)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
